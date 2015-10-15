@@ -134,5 +134,13 @@ to make the checkin in a user, you just call the function checkin when you get t
 
 the ```time_string``` is a ISOstring of Date, if the checkin is right now, you don't need pass the date string as parameter, just keep it void
 
+if you want make the checkin of many attendees, you can use ```check_all()``` function inside attendees, look the example.
+
+```
+  eventick.events.get(id).attendees.check_all([id:attendee_id, checked_at: time_string]);
+
+```
+
+
 ## Licence
 MIT

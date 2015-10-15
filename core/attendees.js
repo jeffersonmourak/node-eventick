@@ -79,6 +79,32 @@
 
 	}
 
+    function check_all(list){
+        var response = request('PUT', 'https://www.eventick.com.br/api/v1/events/' + this.event + '/attendees/check_all.json', {
+            'headers': {
+                'Authorization': this.auth,
+                'Content-Type': 'application/json',
+            },
+            'json':{
+                'attendees': list
+            } 
+
+        });
+
+        if(response.statusCode == 200){
+            var body = response.getBody('utf8');
+            return true;
+        }
+        else{
+            if(response.statusCode == 401){
+                throw "AUTHENTICATION ERROR, CHECK YOURS CREDENTIALS";
+            }
+            else{
+                throw "CONNECTION ERROR, ERROR: " + response.statusCode;
+            }
+        }
+    }
+
 	function Attendees(eventId,auth){
 		this.event = eventId;
 		this.auth = auth;
@@ -87,6 +113,7 @@
 	Attendees.prototype = {
 		list: listAttendees,
 		get: getAttendee,
+        check_all: check_all
 	}
 
 	module.exports = Attendees;

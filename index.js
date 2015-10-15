@@ -9,4 +9,6 @@
 		this.events = new Events(this.token);
 	}
 
+	module.exports = Eventick;
+
 })();
