@@ -2,7 +2,7 @@
 	"use strict";
 
 	var request = require('sync-request');
-
+	var Attendees = require("./attendees");
 	function listEvents(){
 		var response = request('GET', 'https://www.eventick.com.br/api/v1/events.json', {
             'headers': {
@@ -35,7 +35,9 @@
 
         if(response.statusCode == 200){
         	var body = response.getBody('utf8');
-        	return JSON.parse(body).events[0];
+        	var data = JSON.parse(body).events[0];
+        	data.attendees = new Attendees(id, this.auth);
+        	return data;
 	        
         }
         else{
@@ -57,7 +59,7 @@
 
 	Events.prototype = {
 		list: listEvents,
-		get: getEvent
+		get: getEvent,
 	}
 
 	module.exports = Events;
