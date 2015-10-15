@@ -5,7 +5,9 @@ node-eventick is a wrapper for Public API of Eventick
 
 ##Usage
 to use, you need to call the class Eventick, to do this, use.
+
 ``` var Eventick = require('node-eventick'); ``` then...
+
 ``` var eventick = new Eventick('email@email.com','password'); ```
 
 ### Events
