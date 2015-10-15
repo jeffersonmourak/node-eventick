@@ -12,7 +12,7 @@
 
         if(response.statusCode == 200){
         	var body = response.getBody('utf8');
-        	return JSON.parse(body);
+        	return JSON.parse(body).events;
 	        
         }
         else{
