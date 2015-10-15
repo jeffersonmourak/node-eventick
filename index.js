@@ -9,6 +9,4 @@
 		this.events = new Events(this.token);
 	}
 
-	
-
 })();
