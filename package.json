@@ -1,0 +1,25 @@
+{
+  "name": "node-eventick",
+  "version": "0.0.1",
+  "description": "Node Module to Eventick API",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jeffersonmourak/node-eventick.git"
+  },
+  "keywords": [
+    "Eventick"
+  ],
+  "author": "jeffersonmourak <jefinho.moura14@gmail.com> (http://jeffersonmourak.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jeffersonmourak/node-eventick/issues"
+  },
+  "homepage": "https://github.com/jeffersonmourak/node-eventick#readme",
+  "dependencies": {
+    "sync-request": "^2.0.1"
+  }
+}
