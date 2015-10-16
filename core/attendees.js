@@ -62,7 +62,7 @@
         	
         	data.checkin = function(time){
         		time = time || new Date().toISOString();
-        		attendeeCheckin(data.code,self.auth,self.event,time);
+        		attendeeCheckin(data.code,self.auth,eventId,time);
         	}
         	
         	return data;
