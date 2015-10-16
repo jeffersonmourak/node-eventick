@@ -1,4 +1,5 @@
 # node-eventick
+![Build](https://api.travis-ci.org/jeffersonmourak/node-eventick.svg?branch=master "Build")
 ![Eventick Logo](http://aceleratech.com.br/wp-content/uploads/2013/10/eventick1.png "Eventick Logo")
 
 node-eventick is a wrapper for Public API of Eventick
