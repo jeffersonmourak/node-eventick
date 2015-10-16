@@ -3,8 +3,8 @@
 
 	var request = require('sync-request');
 
-	function listAttendees(eventId){
-		var response = request('GET', 'https://www.eventick.com.br/api/v1/events/' + eventId + '/attendees.json', {
+	function listAttendees(){
+		var response = request('GET', 'https://www.eventick.com.br/api/v1/events/' + this.event + '/attendees.json', {
             'headers': {
                 'Authorization': this.auth
             }
@@ -48,8 +48,8 @@
         }
 	}
 
-	function getAttendee(eventId,id){
-		var response = request('GET', 'https://www.eventick.com.br/api/v1/events/' + eventId + '/attendees/' + id + '.json', {
+	function getAttendee(id){
+		var response = request('GET', 'https://www.eventick.com.br/api/v1/events/' + this.event + '/attendees/' + id + '.json', {
             'headers': {
                 'Authorization': this.auth
             }
@@ -79,8 +79,8 @@
 
 	}
 
-    function check_all(eventId,list){
-        var response = request('PUT', 'https://www.eventick.com.br/api/v1/events/' + eventId + '/attendees/check_all.json', {
+    function check_all(list){
+        var response = request('PUT', 'https://www.eventick.com.br/api/v1/events/' + this.event + '/attendees/check_all.json', {
             'headers': {
                 'Authorization': this.auth,
                 'Content-Type': 'application/json',
@@ -105,8 +105,9 @@
         }
     }
 
-	function Attendees(token){
-		this.auth = "Basic " + new Buffer(token + ":").toString("base64");
+	function Attendees(eventId,auth){
+		this.event = eventId;
+		this.auth = auth;
 	}
 
 	Attendees.prototype = {

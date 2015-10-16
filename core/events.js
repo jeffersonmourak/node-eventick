@@ -2,7 +2,7 @@
 	"use strict";
 
 	var request = require('sync-request');
-	var Attendees = require("./attendees");
+	var Attendees = require("./attendees_class");
 	function listEvents(){
 		var response = request('GET', 'https://www.eventick.com.br/api/v1/events.json', {
             'headers': {

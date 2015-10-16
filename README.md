@@ -70,9 +70,13 @@ this will return a object with all information about the events, like this.
 ```
 
 ### Attendees
-If you need get a list of the attendees in a event, use.
+If you wanna get a list of the attendees in a event, use.
 ``` eventick.events.get(id).attendees.list(); ```
-it will return a array with all users, like this
+but if you has the event id, you can get this list using
+
+``` eventick.attendees.list(event_id); ```
+
+in all options will return the same array with all users, like this
 
 ```
 [
@@ -110,8 +114,13 @@ to get just one user, use
 	eventick.events.get(id).attendees.get(user_id);
 
 ```
+or
+```
+  eventick.attendees.get(event_id, user_id);
 
-this will return a object with all user data
+```
+
+and will return a object with all user data
 ```
 {
     "id": 869765,
