@@ -2,9 +2,9 @@ var expect = require('expect.js');
 
 var Eventick = require('./index');
 
-var eventick = new Eventick('your-email@domain.com', 'password'); //change your-email@domain.com to your email and password to your password
-var eventId = false; //put here a valid event ID
-var userId = false; //put here a valid user ID
+var eventick = new Eventick('jefinho.moura14@gmail.com', '230296s2'); //change your-email@domain.com to your email and password to your password
+var eventId = 20533; //put here a valid event ID
+var userId = 869946; //put here a valid user ID
 
 function isObject(val) {
     return (typeof val === 'object');
