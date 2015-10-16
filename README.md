@@ -3,6 +3,12 @@
 
 node-eventick is a wrapper for Public API of Eventick
 
+## instalation
+
+To install, you just need the NPM, using...
+
+``` npm install node-eventick ```
+
 ##Usage
 to use, you need to call the class Eventick, to do this, use.
 
