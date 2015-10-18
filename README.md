@@ -82,6 +82,11 @@ If you wanna get a list of the attendees in a event, use.
 but if you has the event id, you can get this list using
 
 ``` eventick.attendees.list(event_id); ```
+you can also list all the attendees who been checked since a date. (this date is a ISODate)
+look the example
+
+``` eventick.events.get(id).attendees.list(date); ```
+``` eventick.attendees.list(event_id, date); ```
 
 in all options will return the same array with all users, like this
 

@@ -30,6 +30,11 @@ describe('Checking Events Data', function() {
     it('events.get().attendees.list() | should return a array', function() {
         expect(Array.isArray(eventick.events.get(eventId).attendees.list())).to.be.true;
     });
+
+    it('events.get().attendees.list(date) | should return a array', function() {
+        expect(Array.isArray(eventick.events.get(eventId).attendees.list('2015-10-16 14:42:07 -0300'))).to.be.true;
+    });
+
     it('events.get().attendees.get() | should return a object', function() {
         expect(isObject(eventick.events.get(eventId).attendees.get(userId))).to.be.true;
     });
@@ -41,6 +46,9 @@ describe('Checking Attendees Data', function() {
     });
     it('attendees.list() | should return a array', function() {
         expect(Array.isArray(eventick.attendees.list(eventId))).to.be.true;
+    });
+    it('attendees.list(date) | should return a array', function() {
+        expect(Array.isArray(eventick.attendees.list(eventId,'2015-10-16 14:42:07 -0300'))).to.be.true;
     });
 })
 

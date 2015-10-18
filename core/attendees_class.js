@@ -3,8 +3,12 @@
 
 	var request = require('sync-request');
 
-	function listAttendees(){
-		var response = request('GET', 'https://www.eventick.com.br/api/v1/events/' + this.event + '/attendees.json', {
+	function listAttendees(filter){
+        var parameter = "";
+        if(filter){
+            parameter = "?checked_after=" + filter;
+        }
+		var response = request('GET', 'https://www.eventick.com.br/api/v1/events/' + this.event + '/attendees.json' + parameter, {
             'headers': {
                 'Authorization': this.auth
             }
