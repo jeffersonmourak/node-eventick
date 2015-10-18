@@ -10,7 +10,7 @@ To install, you just need the NPM, using...
 
 ``` npm install node-eventick ```
 
-##Usage
+## Usage
 to use, you need to call the class Eventick, to do this, use.
 
 ``` var Eventick = require('node-eventick'); ``` then...
